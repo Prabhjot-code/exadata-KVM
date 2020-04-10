@@ -35,7 +35,7 @@ echo "PauseTime for guest - ${userDomainName} :" ${PauseTime}" seconds"
 
 ## Create xfsdump for all the files in /EXAVMIMAGES/GuestImages/${userDomainName}
 relinkStartTime=$(date +%s)
-find /EXAVMIMAGES/GuestImages/${userDomainName} -type f|awk '{print "xfsdump -l 0 -f",
+find /EXAVMIMAGES/GuestImages/${userDomainName} -type f|awk '{print "/sbin/xfsdump -l 0 -f",
 $0,"/EXAVMIMAGES/Backup"$0}'|sh
 relinkEndTime=$(date +%s)
 reflinkTime=$(expr ${relinkEndTime} - ${relinkStartTime})
