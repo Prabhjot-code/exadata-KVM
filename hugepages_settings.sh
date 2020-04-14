@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# hugepages_settings.sh
+# hugepages_recommendations.sh
 # HUGE PAGES are always implemented with SGA_TARGET or SGA values not with Automatic memory management
 # Linux bash script to compute values for the recommended HugePages/HugeTLB configuration
 # on Redhat Linux
@@ -12,8 +12,7 @@
 
 # Welcome text
 echo "
-This script is intended to compute values for
-the recommended HugePages/HugeTLB configuration for the current shared
+This script is intended to compute values for the recommended HugePages/HugeTLB configuration for the current shared
 memory segments on Redhat Linux or Oracle LInux. Before proceeding with the execution please note following:
  * For ASM instance, it needs to configure ASMM instead of AMM.
  * The 'pga_aggregate_target' is outside the SGA and
@@ -23,7 +22,6 @@ memory segments on Redhat Linux or Oracle LInux. Before proceeding with the exec
    it had better disable the whole HugePages,
    start the DB with new SGA size and run the script again. And make sure that:
  * Oracle Database instance(s) are up and running
- * Oracle Database 11g Automatic Memory Management (AMM) is not setup (See Doc ID 749851.1)
  * The shared memory segments can be listed by command:
      # ipcs -m
 
