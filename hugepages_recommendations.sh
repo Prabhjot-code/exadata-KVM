@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# hugepages_recommendations.sh
+# hugepages_recommendations.sh 
+# Run it with ROOT user
 # HUGE PAGES are always implemented with SGA_TARGET or SGA values not with Automatic memory management
 # Linux bash script to compute values for the recommended HugePages/HugeTLB configuration
 # on Redhat Linux
